@@ -90,3 +90,17 @@ exports.hapusDataMhs = (req, res) => {
         }
     )
 }
+
+// menampilkan matakuliah group
+exports.tampilGroupMatakuliah = (req, res) => {
+    connection.query(
+        'SELECT c.id, c.nama, c.nim, c.jurusan, b.matakuliah, b.sks FROM krs a INNER JOIN matakuliah b ON a.id_matakuliah = b.id_matakuliah INNER JOIN mahasiswa c ON c.id = a.id_mahasiswa',
+        (error, rows, fields) => {
+            if(error){
+                console.log(error);
+            }else{
+                response.jsonNested(rows, res);
+            }
+        }
+    )
+}
