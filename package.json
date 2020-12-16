@@ -1,0 +1,24 @@
+{
+  "name": "apprestapi",
+  "version": "1.0.0",
+  "description": "aplikasi rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerry2204/restapi-app.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "Jerry Andrianto Pangaribuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jerry2204/restapi-app/issues"
+  },
+  "homepage": "https://github.com/Jerry2204/restapi-app#readme"
+}
