@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+// panggil router
+const routes = require('./router');
+routes.app();
 
 app.listen(3000, () => {
     console.log(`Server started on 3000`);
