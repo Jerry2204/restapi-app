@@ -53,3 +53,23 @@ exports.tambahMhs = (req, res) => {
         }
     )
 }
+
+// mengubah data mahasiswa berdasarkan id
+exports.ubahDataMhs = (req, res) => {
+    let id = req.params.id;
+    let nim = req.body.nim;
+    let nama = req.body.nama;
+    let jurusan = req.body.jurusan;
+
+    connection.query(
+        'UPDATE mahasiswa SET nim = ?, nama = ?, jurusan = ? WHERE id = ?',
+        [nim, nama, jurusan, id],
+        (error, rows, fields) => {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok('Berhasil Mengubah data', res);
+            }
+        }
+    )
+}

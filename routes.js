@@ -14,4 +14,7 @@ module.exports = (app) => {
 
     app.route('/tambahMhs')
         .post(jsonku.tambahMhs);
+
+    app.route('/ubahMhs/:id')
+        .put(jsonku.ubahDataMhs);
 }
