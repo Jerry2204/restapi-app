@@ -17,4 +17,7 @@ module.exports = (app) => {
 
     app.route('/ubahMhs/:id')
         .put(jsonku.ubahDataMhs);
+    
+    app.route('/hapusMhs/:id')
+        .delete(jsonku.hapusDataMhs);
 }

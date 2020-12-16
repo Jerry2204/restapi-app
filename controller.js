@@ -73,3 +73,20 @@ exports.ubahDataMhs = (req, res) => {
         }
     )
 }
+
+// menghapus data mahasiswa
+exports.hapusDataMhs = (req, res) => {
+    let id = req.params.id;
+
+    connection.query(
+        'DELETE FROM mahasiswa WHERE id = ?',
+        [id],
+        (error, rows, fields)=> {
+            if(error){
+                console.log(error);
+            }else{
+                response.ok('Berhasil Menghapus data', res);
+            }
+        }
+    )
+}
