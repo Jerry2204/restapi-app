@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Jerry2204/restapi-app/issues"
   },
-  "homepage": "https://github.com/Jerry2204/restapi-app#readme"
+  "homepage": "https://github.com/Jerry2204/restapi-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
 }
