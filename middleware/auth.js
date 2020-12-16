@@ -16,7 +16,7 @@ exports.registrasi = (req, res) => {
         tanggal_daftar: new Date()
     }
 
-    let query = "SELECT email FROM ?? WHERE ??";
+    let query = "SELECT email FROM ?? WHERE ??=?";
     let table = ["user", "email", post.email];
 
     query = mysql.format(query, table);
