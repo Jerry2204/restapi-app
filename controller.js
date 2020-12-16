@@ -20,3 +20,18 @@ exports.tampilDataMhs = (req, res) => {
             }
         });
 }
+
+// menampilkan semua data mahasiswa berdasarkan id
+exports.tampilDataMhsId = (req, res) => {
+    let id = req.params.id;
+    connection.query(
+        'SELECT * FROM mahasiswa WHERE id = ?', [id],
+        (error, rows, fields) => {
+            if(error){
+                connection.log(error);
+            }else{
+                response.ok(rows, res);
+            }
+        }
+    )
+}
